@@ -1,4 +1,4 @@
 const config = {
-    "*.{js,jsx,ts,tsx}": ["jest --findRelatedTests --passWithNoTests"]
+  '*.{js,jsx,ts,tsx}': ['npm run lint'],
 };
 module.exports = config;
