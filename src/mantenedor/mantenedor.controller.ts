@@ -17,6 +17,7 @@ export class MantenedorController {
 
   @Post()
   create(@Body() createMantenedorDto: CreateMantenedorDto) {
+    console.log('algo');
     return this.mantenedorService.create(createMantenedorDto);
   }
 
