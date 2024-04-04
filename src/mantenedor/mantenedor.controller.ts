@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { MantenedorService } from './mantenedor.service';
 import { CreateMantenedorDto } from './dto/create-mantenedor.dto';
 import { UpdateMantenedorDto } from './dto/update-mantenedor.dto';
@@ -23,7 +31,10 @@ export class MantenedorController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateMantenedorDto: UpdateMantenedorDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateMantenedorDto: UpdateMantenedorDto,
+  ) {
     return this.mantenedorService.update(+id, updateMantenedorDto);
   }
 
